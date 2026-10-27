@@ -1,0 +1,9 @@
+
+STYLES
+    styles.css - the general stylesheet, containing the default formatting which can be applied to any page.
+                 It should be added to every html file, in addition to a custom stylesheet created for each
+                 page, which handles any elements that are unique to the page, or instances where the default
+                 styles should be overwritten.
+
+DOM CLASSES
+    .wrap - This is added to any div that is used to group flex items for formatting reasons.

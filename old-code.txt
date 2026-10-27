@@ -1,0 +1,657 @@
+
+<!-- 
+    <main>
+      <!-- INTERESTS: things I like -->
+      <section id="interests-section">
+
+        <div id="info-list">
+          <h2 class="sectiontitle">INTERESTS</h2>
+          <p>
+            <ul class="about-list">
+              <li>Writing/reading fiction and poetry</li>
+              <li>I like anime and manga and webnovels</li>
+              <li>I draw and collage and create cosplays</li>
+              <li>I'm a Computer Science (Human-Computer Interaction) and English (Computational Cultural Analytics) major
+                <ul class="sub-list">
+                  <li>Though I'm interested in a broad range of topics and interdisciplinary methods</li>
+                </ul>
+              </li>
+              <li>I like games and I like making games</li>
+              <li>I'm a foil fencer!</li>
+            </ul>
+          </p>
+        </div>
+
+        <div id="image-box">
+          <!-- <img id="base-img" src="images/cicadayinlin.png" alt="photo description"> -->
+          <img id="hover-img" src="images/aquariumyinlin.png" alt="Yinlin taking a selfie in an aquarium mirror.">
+        </div>
+
+      </section>
+
+      <!-- PHOTO: Add a photo of yourself or something you like -->
+      <!-- To use an image, place it in your images/ folder and reference it like this: -->
+      <!-- <img src="images/your-photo.jpg" alt="A description of the photo"> -->
+
+      <!-- PUBLICATIONS: my publications -->
+      <section id="publications-section">
+        <h2 class="sectiontitle">PUBLICATIONS</h2>
+        <p>
+          <ul class="about-list">
+            <li><a href="https://www.deerfieldlibrary.org/queerpoemaday/14-yinlin-zhao/" target="_blank"><strong>The Mpreg Poem</strong> in <em>Queer Poem-a-Day, Year 4</em></a></li>
+            <li><a href="https://www.thedawnreview.com/issue-4"><strong>Everyone You've Ever Kissed Up To Now</strong> and <strong>Killing the Girl</strong> in <em>The Dawn Review</em></a></li>
+            <li><a href="https://www.hominumjournal.org/issue-4-4/zhao"><strong>burial</strong> in <em>Hominum Journal</em></a></li>
+            <li><a href="https://braveyoungcowboys.neocities.org/comingoutpoem"><strong>Poem in Which the Numbers Increase for Every Day I Do Not Tell My Parents I Am Trans</strong></a></li>
+            <li><a href="https://www.warninglines.com/vol03"><strong>EDEN: A Game About Choices</strong> in <em>Warning Lines: Fall'n Cherub</em></a></li>
+            <li><a href="http://www.antinarrativezine.com/issue-01-comfort-food.html"><strong>waiting room food</strong> in <em>antinarrative zine: comfort food</em></a></li>
+          </ul>
+        </p>
+      </section>
+
+      <!-- GAMES: my games -->
+      <section id="games-section">
+        <h2 class="sectiontitle">GAMES</h2>
+        <div class="gamedisplay">
+          <div class="game">
+            <img class="gameicon" src="images/synapticfire.png" alt="cover image for the game Synaptic Fire. A cyborg is on the front.">
+            <a class="gamelink" href="https://braveyoungcowboys.itch.io/synaptic-fire" target="_blank">Synaptic Fire [SLICE]</a>
+          </div>
+
+          <div class="game">
+            <img class="gameicon" src="images/blankgame.png" alt="grey star on white background">
+            <a class="gamelink" href="https://braveyoungcowboys.itch.io/eremitic-monk-simulator" target="_blank">eremitic monk simulator [unreleased wip]</a>
+          </div>
+
+          <div class="game">
+            <img class="gameicon" src="images/blankgame.png" alt="grey star on white background">
+            <a class="gamelink" href="https://braveyoungcowboys.itch.io/we-are-all-going-forward-none-of-us-are-going-back" target="_blank">WE ARE ALL GOING FORWARD (NONE OF US ARE GOING BACK)</a>
+          </div>
+
+          <div class="game">
+            <img class="gameicon" src="images/silverdollar.png" alt="cover image for the game Silver Dollar, featuring the game name over a green circle.">
+            <a class="gamelink" href="https://braveyoungcowboys.itch.io/silver-dollar" target="_blank">Silver Dollar</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HELPFUL LINKS: my links! -->
+      <section id="helpfullinks-section">
+        <h2 class="sectiontitle">HELPFUL LINKS</h2>
+        <p>
+          <a class="helpfullinks" href="https://docs.google.com/spreadsheets/d/1TcMpIy_3KRnBPIOm2WoRr6BHsfEgXVMyUMlLH-bWLyo/edit?usp=sharing" target="_blank">Bay Area Art Tabling Opportunities</a>
+          <a class="helpfullinks" href="https://drive.google.com/drive/folders/1YQNzOsT0nvo9gZdNir8XbkkyiXGNX_8V?usp=sharing" target="_blank">Danmei Publication Cultivation Sect</a>
+        </p>
+      </section>
+
+      <!-- CONTACT ME: my contacts! -->
+      <section id="contactme-section">
+        <h2 class="sectiontitle">CONTACT ME</h2>
+        <p>
+          <a class="contacts" href="mailto:autoclav@stanford.edu" target="_blank">my university email</a>
+          <a class="contacts" href="https://www.linkedin.com/in/aileen-zhao-3395a127a" target="_blank">my LinkedIn</a>
+        </p>
+      </section>
+
+    </main>
+
+    <!-- FOOTER: A small sign-off or credit -->
+    <footer>
+      <p>Made by Yinlin Zhao for CS 146J</p>
+    </footer>
+
+    <!-- BACK LINK: Link back to the class directory -->
+    <nav>
+      <a href="../index.html">&larr; Back to Student Directory</a>
+    </nav> --> -->
+
+
+  ------------------------------------------------------------------------
+
+
+  <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yinlin Zhao</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/script.js" defer></script>
+
+  <!-- FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?
+              family=Coral+Pixels&family=Jacquard+12&family=Handjet:wght,ELSH@100..900,2&family=Nabla&family=Rock+3D&family=Micro+5+Charted&family=Rubik+Broken+Fax&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <h1>YINLIN<br>ZHAO</h1>
+    <div class="wrap">
+      <p id="headerbio">
+        is a COMPUTER SCIENCE and ENGLISH double major,
+        interested in the intersection of TECHNOLOGY and HUMANITIES.
+      </p>
+
+      <!--navigation menu-->
+      <nav class="header navbar">
+        <a href="/index.html" class="navlinks">Home</a>
+        <!-- <a href="/index.html" class="navlinks">Sitemap</a> -->
+        <a href="/projects.html" class="navlinks">Projects</a>
+        <a href="/experience.html" class="navlinks">Experience</a>
+        <!-- <a href="/index.html" class="navlinks">Awards</a> -->
+        <a href="/contacts.html" class="navlinks">Contacts</a>
+        <!-- <a href="/index.html" class="navlinks">Log</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <!--SIDEBAR-->
+  <aside class="sidebar">
+    <button>Dark Mode</button>
+    <button>Switch Font</button>
+    <button>Change Cursor</button>
+    <button>Play Music</button>
+  </aside>
+
+  <!--MAIN CONTENT-->
+  <main>
+
+    <!--Intro + Sitemap-->
+    <div class="wrap" id="intro-sitemap">
+
+      <!--Introduction-->
+      <section>
+        <img src="../assets/placeholder.jpg" alt="portrait">
+        <p>
+          Hi! I'm Yinlin Zhao, welcome to my website! The sitemap will tell you more about
+          the different pages on this website, or scroll down to see a brief summary of each page.
+        </p>
+      </section>
+
+      <!--Sitemap-->
+      <section>
+        <h2>SITEMAP</h2>
+        <ul> <!--might change these to buttons-->
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/experience.html">Experience</a></li>
+          <li><a href="/contacts.html">Contacts</a></li>
+        </ul>
+        <p>
+          Description of page and its contents.
+        </p>
+      </section>
+
+    </div>
+
+    <!--Quick Links menu-->
+    <nav id="quick-links">
+      <h2>QUICK LINKS</h2>
+      <ul>
+        <li><a href="https://github.com/yinlinzhao">Github</a></li>
+        <li><a href="/contacts.html">LinkedIn</a></li>
+        <li><a href="/contacts.html">Email</a></li>
+      </ul>
+    </nav>
+
+    <!--projects summary-->
+    <section class="summary-widget">
+      <h2>PROJECTS</h2>
+      <div class="wrap">
+        <img src="../assets/placeholder.jpg" alt="image">
+        <p>
+          A brief summary of the project.
+        </p>
+      </div>
+    </section>
+
+    <!-- experience summary -->
+    <section class="summary-widget">
+      <h2>EXPERIENCE</h2>
+      <div class="wrap">
+        <img src="assets/placeholder.jpg" alt="image">
+        <p>
+          A brief summary of the experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- contacts summary-->
+    <section class="summary-contacts">
+      <h2>CONTACTS</h2>
+      <ul>
+        <li><a href="mailto:yinlin.zhao@example.com">Email</a></li>
+        <li><a href="https://linkedin.com/in/yinlinzhao">LinkedIn</a></li>
+        <li><a href="https://github.com/yinlinzhao">GitHub</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer>
+    <p>Last updated: April 30, 2026</p>
+    <button>Return to Top</button>
+  </footer>
+
+</body>
+
+</html>
+
+<!--
+Asset Sources:
+
+Cicada Cursor: https://asia.si.edu/explore-art-culture/collections/ 
+Finger Cursor: Revolutionary Girl Utena
+
+-->
+
+
+
+body {
+  /* BACKGROUND AND BLOCK */
+  --background-color-light: #fff9e4;
+  --background-color-dark: #001238;
+
+  /* ITEM BORDER */
+  --border-color-light: #6495ED;
+  --border-color-dark: #001238;
+
+  /* TEXT */
+  --heading-text-light: #6495ED;
+  --heading-text-dark: #6495ED;
+
+  --body-text-light: #a6c5ff;
+  --body-text-dark: #001238;
+
+  --header-font: 'Jacquard 12';
+  --subheading-font-1: 'Jacquard 12';
+  --body-font-1: 'Coral Pixels';
+  font-family: 'Jacquard 12', 'Rubik Broken Fax','Nabla', 'Coral Pixels', Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+
+  /* DECOR */
+  --rgu-cursor: url("../assets/rgu-horizontal-cursor.png") 0 4, auto;
+  --cicada-cursor-1: url("../assets/cicada-cursor-1.png") 0 0, auto;
+
+  --cursor: url("../assets/rgu-horizontal-cursor.png") 0 4, auto;
+
+  /* setup */
+  cursor: var(--cursor);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  max-width: 950px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    max-width: 300px;
+  }
+}
+
+/* IMAGES */
+img{
+  max-width: 50%;
+}
+
+/* CURSOR */
+a:hover{
+  cursor: var(--cursor);
+}
+
+button:hover{
+  cursor: var(--cursor);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+}
+
+header h1{
+  padding: 0.25em;
+  font-size: 3rem;
+}
+
+header .wrap{
+  display: flex;
+  flex-direction: column;
+}
+
+header nav .navbar{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header nav a{
+    border: 2px solid var(--border-color-light);
+    padding: 0.25rem 0.5rem;
+}
+
+/* SIDEBAR */
+aside{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border-color-light);
+  padding: 1rem;
+  gap: 0.5rem;
+
+  max-width: 80px;
+
+  cursor: url("../assets/rgu-horizontal-cursor.png") 0 4, auto;
+}
+
+/* MAIN CONTENT */
+
+/*intro-sitemap wrapper*/
+
+#intro-sitemap{
+  display: flex;
+  align-items: center;
+}
+
+/*quick links*/
+
+#quick-links{
+  display:flex;
+  justify-content: space-between;
+}
+
+#quick-links ul{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+/*summary displays*/
+
+.summary-widget{
+  display:flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color-light);
+  padding: 1rem;
+}
+
+.summary-widget .wrap{
+  display:flex;
+  justify-content: center;
+  width:100%;
+}
+
+/*contacts summary*/
+.summary-contacts{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--border-color-light);
+  padding: 1rem;
+}
+
+/* FOOTER */
+footer{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: url("../assets/rgu-horizontal-cursor.png") 0 4, auto;
+}
+
+/* a{
+  color:rgb(0, 89, 44);
+}
+
+.siteheader{
+  display:flex;
+  border:1px solid black;
+  padding: 20px;
+  margin: 10px;
+  gap: 10px;
+  background-color:black;
+}
+
+#name{
+  display:inline-block;
+  border:0px solid black;
+  font-size:70px;
+  line-height: 100%;
+  color:aliceblue;
+}
+
+#headersidebar{
+  display:inline-block;
+  border:0px solid black;
+  font-size:larger;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#headerbio{
+  display:block;
+  border:0px solid black;
+  font-size:larger;
+  margin-left: 20px;
+  color:aliceblue;
+}
+
+nav{
+  display:block;
+  margin-left:20px;
+  border:1px solid aliceblue;
+}
+
+.navlinks{
+  margin: 5px;
+  color:rgb(255, 255, 255);
+}
+
+.navlinks a{
+  color:rgb(255, 255, 255);
+}
+
+
+ .sectiontitle{
+  margin:10px;
+ }
+
+.about-list{
+  display:block;
+  margin-left:40px;
+  list-style-type:square;
+ }
+
+.sub-list{
+  list-style-type:square;
+  margin-left:50px;
+}
+
+
+ #interests-section{
+  display:flex;
+  gap: 10px;
+  flex: 1 1 200px;
+ }
+
+ #info-list{
+  display:flex;
+  flex-direction:column;
+ }
+
+ #image-box{
+  border: 2px solid black;
+  margin-right:10px;
+  height:300px;
+  background-image: url("images/cicadayinlin.png");
+  background-size:contain;
+ }
+
+#hover-img {
+  max-height:100%;
+  width:auto;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#hover-img:hover {
+  opacity: 1;
+}
+
+
+#publications-section a:visited{
+  color:rgb(0, 89, 44);
+}
+
+#publications-section a:hover{
+  color:rgb(0, 155, 129);
+}
+
+
+.gamedisplay{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  flex: 1 1 0px;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.game{
+  display:flex;
+  flex-direction:column;
+  border: 1px solid grey;
+  width: 15vw;
+}
+
+.gameicon{
+  margin-bottom: 5px;
+  display:block;
+  border: 0px solid black;
+}
+
+.gamelink{
+  white-space: normal;
+}
+
+#games-section a:visited{
+  color:rgb(0, 89, 44);
+}
+
+#games-section a:hover{
+  color:rgb(0, 155, 129);
+}
+
+.helpfullinks{
+  display:flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  margin-left:20px;
+}
+
+#helpfullinks-section a:visited{
+  color:rgb(0, 89, 44);
+}
+
+#helpfullinks-section a:hover{
+  color:rgb(0, 155, 129);
+}
+
+.contacts{
+  display:flex;
+  justify-content:flex-start;
+  margin-left:20px;
+}
+
+#contactme-section a:visited{
+  color:rgb(0, 89, 44);
+}
+
+#contactme-section a:hover{
+  color:rgb(0, 155, 129);
+}
+
+footer{
+  margin-top: 40px;
+}
+
+--- Navigation (back link) --- */
+
+
+
+
+// let isHeld = false;
+// let hoveringButton = false;
+
+// let changeCursorButton = document.querySelector(".change-cursor");
+
+// let regularCursor = "url('images/cicada-cursor-1.png') 32 32, crosshair";
+// let heldCursor = "url('images/cicada-cursor-2.png') 32 32, pointer";
+// let buttonHoverCursor = "url('images/cicada-cursor-3.png') 32 32, crosshair";
+// let cursorDeath = "url('images/cicada-cursor-4.png') 32 32, crosshair";
+
+// function changeCursor(state){
+//     console.log("Changing cursor to:", state);
+//     switch(state){
+//         case "default":
+//             document.body.style.cursor = regularCursor;
+//             break;
+//         case "held":
+//             document.body.style.cursor = heldCursor;
+//             break;
+//         case "buttonHover":
+//             document.body.style.cursor = buttonHoverCursor;
+//             break;
+//         case "death":
+//             document.body.style.cursor = cursorDeath;
+//             break;
+//     }
+// }
+
+// document.addEventListener("mousedown", function(event) {
+//     isHeld = true;
+//     changeCursor("held");
+// });
+
+// document.addEventListener("mouseup", function(event) {
+//     isHeld = false; 
+//     changeCursor("default");
+// });
+
+// changeCursorButton.addEventListener("mouseover", function(event) {
+//     console.log("Mouse over button!");
+
+//     hoveringButton = true;
+//     changeCursor("buttonHover");
+//     if(isHeld && hoveringButton){
+//         changeCursor("death");
+//     }
+// });
+
+// changeCursorButton.addEventListener("mouseout", function(event) {
+//     console.log("Mouse out of button!");
+
+//     hoveringButton = false;
+//     changeCursor("default");
+// });
+
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   console.log('DOM fully loaded and parsed. You can now manipulate elements.');
+//     changeCursor("default");
+// });
+
