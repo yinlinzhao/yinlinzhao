@@ -1,6 +1,6 @@
 body {
   /* BACKGROUND AND BLOCK */
-  background-image: url("../assets/background-texture.jpg");
+  background-image: url("./assets/background-texture.jpg");
   background-size: 300px;
   background-repeat: repeat;
   --background-color-light: #acffb2;
@@ -26,10 +26,10 @@ body {
   margin: 0;
 
   /* DECOR */
-  --rgu-cursor: url("../assets/rgu-horizontal-cursor.png") 0 4, auto;
-  --cicada-cursor-1: url("../assets/cicada-cursor-1.png") 0 0, auto;
+  --rgu-cursor: url("./assets/rgu-horizontal-cursor.png") 0 4, auto;
+  --cicada-cursor-1: url("./assets/cicada-cursor-1.png") 0 0, auto;
 
-  --cursor: url("../assets/rgu-horizontal-cursor.png") 0 4, auto;
+  --cursor: url("./assets/rgu-horizontal-cursor.png") 0 4, auto;
 
   /* setup */
   cursor: var(--cursor);
