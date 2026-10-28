@@ -24,35 +24,50 @@
           <img src="./assets/speech-box.svg" alt="Speech box" id="speech-box" />
           <h1>YINLIN ZHAO</h1>
           <div id="contacts">
-            <img
-              src="./assets/github-logo.png"
-              alt="GitHub logo"
-              class="contacts-icon"
-            />
-            <img
-              src="./assets/linkedin-logo.png"
-              alt="LinkedIn logo"
-              class="contacts-icon"
-            />
+            <!-- ADDED: icons wrapped in links -->
+            <a
+              href="https://github.com/yinlinzhao"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./assets/github-logo.png"
+                alt="GitHub logo"
+                class="contacts-icon"
+              />
+            </a>
+            <!-- TODO: replace "#" with your LinkedIn profile URL -->
+            <a href="#" target="_blank" rel="noopener">
+              <img
+                src="./assets/linkedin-logo.png"
+                alt="LinkedIn logo"
+                class="contacts-icon"
+              />
+            </a>
+            <!-- END ADDED -->
           </div>
         </header>
 
         <div id="info-nav">
           <div>
-            <button class="nav-btn">
+            <button class="nav-btn" data-target="projects-gallery">
+              <!-- ADDED data-target -->
               <img src="./assets/navigation-button.png" alt="" />
               <span>Projects</span>
             </button>
-            <button class="nav-btn">
+            <button class="nav-btn" data-target="experiences-gallery">
+              <!-- ADDED data-target -->
               <img src="./assets/navigation-button.png" alt="" />
               <span>Experience</span>
             </button>
-            <button class="nav-btn">
+            <button class="nav-btn" data-target="about-me">
+              <!-- ADDED data-target -->
               <img src="./assets/navigation-button.png" alt="" />
               <span>About Me</span>
             </button>
           </div>
-          <p>
+          <p id="about-me">
+            <!-- ADDED id -->
             Hi! I'm Yinlin, but I also go by Aileen! I'm a Computer Science and
             English major at Stanford University, class of 2028. Welcome to my
             website; take a look around! <br />
@@ -128,11 +143,14 @@
 
     <!--FOOTER-->
     <footer>
-      <p>Last updated: April 30, 2026</p>
+      <p>Last updated: October 28, 2026</p>
+      <!-- EDITED date -->
       <p>© 2026 Yinlin Zhao. All rights reserved.</p>
       <p>Contacts: autoclav@stanford.edu</p>
-      <p>You are the ???th visitor!</p>
+      <!-- <p>You are the ???th visitor!</p> -->
       <button>Return to Top</button>
+      <!-- ADDED: footer decoration from wireframe. TODO: swap for a larger cicada image if this one looks small -->
+      <img src="./assets/cicada-cursor-1.png" alt="" class="footer-decor" />
     </footer>
   </body>
 </html>

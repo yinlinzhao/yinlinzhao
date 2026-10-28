@@ -1,6 +1,7 @@
 body {
   /* BACKGROUND AND BLOCK */
-  background-image: url("./assets/background-texture.jpg");
+  background-image: url("../assets/background-texture.jpg")
+    /* EDITED: ../ because this file lives in /css */;
   background-size: 300px;
   background-repeat: repeat;
   --background-color-light: #acffb2;
@@ -26,10 +27,11 @@ body {
   margin: 0;
 
   /* DECOR */
-  --rgu-cursor: url("./assets/rgu-horizontal-cursor.png") 0 4, auto;
-  --cicada-cursor-1: url("./assets/cicada-cursor-1.png") 0 0, auto;
+  /* EDITED (next 3 cursor lines): ./assets -> ../assets since this file lives in /css */
+  --rgu-cursor: url("../assets/rgu-horizontal-cursor.png") 0 4, auto;
+  --cicada-cursor-1: url("../assets/cicada-cursor-1.png") 0 0, auto;
 
-  --cursor: url("./assets/rgu-horizontal-cursor.png") 0 4, auto;
+  --cursor: url("../assets/rgu-horizontal-cursor.png") 0 4, auto;
 
   /* setup */
   cursor: var(--cursor);
@@ -183,3 +185,531 @@ header .contacts-icon {
     url("../assets/rgu-horizontal-cursor.png") 0 4,
     auto;
 } */
+
+/* =====================================================================
+   ADDED BY CLAUDE (baseline build, revision 2) — everything below this
+   line is new. Safe to rewrite or delete section by section.
+   ===================================================================== */
+
+/* ---- ADDED: general ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+.lr:focus-visible {
+  outline: 3px solid var(--heading-text-light);
+  outline-offset: 2px;
+}
+
+/* ---- ADDED: front page layout ----
+   Uses CSS grid so the same HTML can be rearranged for desktop vs mobile.
+   `display: contents` lets the header, nav buttons, text box and character
+   (which are nested in wrapper divs) act as direct grid items. */
+#frontpage {
+  display: grid;
+  /* REVISED: stars | text box | avatar, like the desktop sketch */
+  /* REVISED: fluid columns; the last column hugs the avatar so there's no empty strip on the right */
+  grid-template-columns: minmax(14rem, 1.5fr) minmax(0, 1.5fr) auto;
+  grid-template-areas:
+    "header header body"
+    "nav    about  body";
+  grid-template-rows: auto 1fr;
+  align-content: stretch; /* REVISED: fill the screen height */
+  column-gap: 2rem;
+  row-gap: clamp(
+    0.75rem,
+    3vh,
+    2rem
+  ); /* REVISED: scales with screen height so nothing runs off the bottom */
+  min-height: 100vh; /* the wireframe's dashed lines = one screen tall */
+  min-height: 100svh;
+  padding: clamp(1rem, 4vh, 2rem) 4vw;
+  box-sizing: border-box;
+}
+
+#frontpage > div,
+#frontpage #info-nav {
+  display: contents;
+}
+
+header {
+  grid-area: header;
+  width: min(
+    100%,
+    150vh
+  ); /* REVISED: fills its grid area, but never taller than the screen allows (original cap was 40rem) */
+  max-width: none;
+}
+
+header h1 {
+  font-size: clamp(1.25rem, 7cqw, 4.5rem); /* REVISED: allow a larger name */
+}
+
+/* ADDED: shorter bubble, same length. Stretches the image to a wider shape
+   (the border strokes look a little thinner top/bottom). Raise the first
+   number to make it even shorter, lower it to make it taller. */
+header img#speech-box {
+  aspect-ratio: 4.4 / 1;
+  object-fit: fill;
+}
+
+#info-nav > div {
+  grid-area: nav;
+  align-self: center;
+  /* REVISED: 2 stars on top, 1 below, like the sketch (reset in the mobile block).
+     Star size shrinks on short screens so the cluster always fits. */
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    min(15rem, 26vh)
+  ); /* REVISED: slightly bigger stars to fill their column */
+  justify-content: center; /* REVISED: cluster centered in its column */
+  gap: 0 10rem;
+}
+
+#info-nav .nav-btn:nth-child(2) {
+  transform: translateY(-0.4rem);
+}
+#info-nav .nav-btn:nth-child(3) {
+  grid-column: 1 / 3;
+  justify-self: center;
+  margin-top: -1rem;
+}
+
+#info-nav p {
+  grid-area: about;
+  border: 3px solid var(--border-color-dark);
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  align-self: center;
+  font-size: clamp(
+    0.85rem,
+    2.4vh,
+    1.15rem
+  ); /* REVISED: scales with screen height */
+  padding: clamp(0.75rem, 2.5vh, 1.5rem) 5rem clamp(0.75rem, 2.5vh, 1.5rem)
+    1.5rem; /* right padding keeps text clear of the avatar */
+  position: relative;
+  z-index: 1; /* keeps text clear of the avatar that overlaps the box */
+}
+
+#yinlin-body {
+  grid-area: body;
+  justify-self: end; /* REVISED: flush with the right edge */
+  margin-left: -4.5rem; /* ADDED: overlap the text box slightly */
+  position: relative;
+  z-index: 2;
+  align-self: center;
+  height: min(88vh, 60rem);
+  width: auto;
+  object-fit: contain;
+}
+
+header h1 {
+  color: var(--body-text-dark);
+  text-align: center;
+  justify-self: center;
+}
+
+/* REVISED: GitHub/LinkedIn icons sit at the bottom-right of the speech bubble */
+header #contacts {
+  justify-self: end;
+  gap: 2cqw;
+  padding: 0 11% 3% 0; /* REVISED: closer to the corner */
+}
+
+header #contacts .contacts-icon {
+  width: clamp(1rem, 3.5cqw, 1.6rem); /* REVISED: smaller icons */
+}
+
+header #contacts a {
+  display: block;
+}
+
+/* ---- ADDED: smaller star buttons with the label inside the star ---- */
+#info-nav .nav-btn {
+  --nav-btn-size: min(15rem, 26vh); /* REVISED: shrinks on short screens */
+  width: var(--nav-btn-size);
+  height: var(--nav-btn-size);
+  max-width: var(--nav-btn-size);
+  max-height: var(--nav-btn-size);
+  padding: 0;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.nav-btn img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-btn span {
+  grid-area: 1 / 1;
+  position: static;
+  z-index: 1;
+  font-size: calc(var(--nav-btn-size) * 0.095);
+  line-height: 1;
+  text-align: center;
+  pointer-events: none;
+  color: #fff; /* REVISED: white labels */
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.55); /* helps legibility; delete if unwanted */
+}
+
+.nav-btn:hover img {
+  filter: brightness(1.15);
+}
+
+/* ---- ADDED: galleries (title + arrows left, "monitor" right) ---- */
+#projects-gallery,
+#experiences-gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  min-height: 100vh; /* one screen tall, like the wireframe sections */
+  min-height: 100svh;
+}
+
+/* wireframe: experiences section is mirrored (title on the right) */
+#experiences-gallery {
+  flex-direction: row-reverse;
+  /* leave room so the footer fits on the same screen */
+  min-height: calc(100svh - 10rem);
+}
+
+.title-and-scroll {
+  flex: 0 0 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-and-scroll h2 {
+  font-family: var(--header-font);
+  color: var(--body-text-dark);
+  background-color: var(--background-color-light);
+  border: 3px solid var(--border-color-dark);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  width: fit-content;
+}
+
+.lr-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.lr {
+  width: 3rem;
+  height: auto;
+  cursor: var(--cursor);
+}
+
+/* the same arrow image is used twice, so flip the first one to point left */
+.lr-buttons .lr:last-child {
+  transform: scaleX(-1);
+}
+
+.lr:hover {
+  filter: brightness(1.15);
+}
+
+/* ---- ADDED: the "monitor" ----
+   TODO (missing asset): wireframe shows a CRT monitor illustration.
+   This is a CSS stand-in. Replace with an image frame when you have one. */
+.showcase {
+  flex: 1;
+  min-width: 0;
+  background-color: var(--background-color-light);
+  border: 14px solid #1eca91;
+  border-bottom-width: 28px;
+  border-radius: 28px;
+  box-shadow:
+    inset 0 0 0 4px var(--border-color-dark),
+    0 6px 0 var(--border-color-dark);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: var(--body-font-1);
+  color: var(--body-text-dark);
+}
+
+.showcase-main {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.showcase-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.showcase-info h3 {
+  font-family: var(--subheading-font-1);
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+}
+
+.showcase-meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* scrollable description box (wireframe) */
+.showcase-desc {
+  max-height: 14rem;
+  overflow-y: auto;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--border-color-dark);
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.showcase-desc ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.showcase-desc li + li {
+  margin-top: 0.4rem;
+}
+
+.showcase-image {
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  border: 3px solid var(--border-color-dark);
+  flex: 0 1 45%;
+}
+
+.showcase > a {
+  align-self: flex-start;
+  background: var(--border-color-dark);
+  color: var(--background-color-light);
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.showcase > a:hover {
+  background: var(--heading-text-light);
+  color: var(--border-color-dark);
+}
+
+.showcase > a[hidden] {
+  display: none;
+}
+
+/* ---- ADDED: footer ---- */
+footer {
+  position: relative;
+  margin-top: auto;
+  padding: 1.5rem 2rem;
+  background-color: var(--background-color-light);
+  color: var(--body-text-dark);
+  font-family: var(--body-font-1);
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+footer button {
+  margin-top: 0.75rem;
+  font-family: var(--body-font-1);
+  background: var(--border-color-dark);
+  color: var(--background-color-light);
+  border: none;
+  padding: 0.4rem 0.9rem;
+}
+
+.footer-decor {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.5rem;
+  width: 4rem;
+  height: auto;
+}
+
+/* ---- ADDED: tablet/phone ----
+   NOTE: your existing rules cap body at 600px / 300px wide, which is very
+   narrow on phones, so this lifts that cap. Delete if the cap was intentional. */
+@media (max-width: 1000px) {
+  body {
+    max-width: 100%;
+  }
+}
+
+/* ---- ADDED: mobile layout (right-hand wireframe) ----
+   name bubble on top -> text box beside the character -> stars underneath ->
+   monitor with the PROJECTS label + arrows below it -> same for experiences. */
+@media (max-width: 750px) {
+  body {
+    max-width: 100%;
+  }
+
+  #frontpage {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 36%);
+    grid-template-areas:
+      "header header"
+      "about  body"
+      "nav    nav";
+    align-content: start;
+    column-gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  #frontpage {
+    grid-template-rows: auto auto auto;
+    align-content: start;
+    row-gap: 1rem;
+  }
+
+  #yinlin-body {
+    height: auto;
+    width: 100%;
+    max-height: 60vh;
+    align-self: end;
+    margin-left: 0;
+    justify-self: stretch;
+  }
+
+  header #contacts {
+    padding: 0 11% 3% 0;
+  }
+
+  header h1 {
+    font-size: clamp(1.25rem, 7cqw, 3rem);
+  }
+
+  header img#speech-box {
+    aspect-ratio: auto; /* natural (taller) bubble on mobile */
+  }
+
+  #info-nav p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    padding: 0.75rem;
+  }
+
+  #info-nav > div {
+    display: flex; /* REVISED: back to a simple row on mobile */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  #info-nav .nav-btn:nth-child(n) {
+    margin: 0;
+    transform: none;
+    grid-column: auto;
+    justify-self: auto;
+  }
+
+  #info-nav .nav-btn {
+    --nav-btn-size: 6.5rem;
+  }
+
+  /* monitor first, label + arrows underneath */
+  #projects-gallery,
+  #experiences-gallery {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    min-height: 100svh;
+  }
+
+  #experiences-gallery {
+    flex-direction: column-reverse;
+    min-height: calc(100svh - 12rem);
+  }
+
+  .title-and-scroll {
+    flex: none;
+  }
+
+  .showcase {
+    flex: none;
+    border-width: 8px;
+    border-bottom-width: 16px;
+    border-radius: 18px;
+    padding: 0.75rem;
+  }
+
+  /* wireframe: text on the left, image on the right */
+  .showcase-main {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .showcase-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .showcase-meta {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .showcase-desc {
+    max-height: 9rem;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .showcase-image {
+    flex: 0 0 36%;
+    max-width: 36%;
+    aspect-ratio: 3 / 4;
+  }
+
+  .footer-decor {
+    position: static;
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* hover cursor swap */
+:root {
+  --cursor-hover: url("../assets/rgu-horizontal-cursor-hover.png") 0 4, auto;
+}
+
+a:hover,
+button:hover,
+.lr:hover {
+  cursor: var(--cursor-hover);
+}
+header h1 {
+  cursor: var(--cursor-hover);
+}
